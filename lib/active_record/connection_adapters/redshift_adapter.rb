@@ -565,6 +565,8 @@ module ActiveRecord
         # Connects to a PostgreSQL server and sets up the adapter depending on the
         # connected server's characteristics.
         def connect
+          puts "CONN PARAMS"
+          puts @connection_paramters
           @connection = PGconn.connect(@connection_parameters)
 
           configure_connection
